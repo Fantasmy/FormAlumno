@@ -73,6 +73,12 @@ namespace FormAlumnos
                 msg.Append("Creado correctamente");
                 //   infoText.Text = msg.ToString(); <- if you add a label or popup
 
+                // clear fields after saved data
+                nameBox.Text = "";
+                surnameBox.Text = "";
+                dniBox.Text = "";
+                idBox.Text = "";
+
                 log.Debug("alumno creado correctamente " + JsonConvert.SerializeObject(alumno));
                 
             }   
