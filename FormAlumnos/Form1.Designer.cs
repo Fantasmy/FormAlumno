@@ -37,7 +37,7 @@
             this.dniBox = new System.Windows.Forms.TextBox();
             this.idBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,6 +82,7 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(100, 26);
             this.nameBox.TabIndex = 4;
+            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // surnameBox
             // 
@@ -113,21 +114,22 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Student Form";
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Location = new System.Drawing.Point(227, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addButton.Location = new System.Drawing.Point(227, 299);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(85, 39);
+            this.addButton.TabIndex = 9;
+            this.addButton.Text = "ADD";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.idBox);
             this.Controls.Add(this.dniBox);
@@ -139,6 +141,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +158,7 @@
         private System.Windows.Forms.TextBox dniBox;
         private System.Windows.Forms.TextBox idBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addButton;
     }
 }
 
