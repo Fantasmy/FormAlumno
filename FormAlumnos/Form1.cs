@@ -18,6 +18,8 @@ namespace FormAlumnos
         List<Alumno> alumnos = new List<Alumno>(); //Alumno clase creada
         string filePath = "alumnos.json";
 
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType); // created variable log
+
         public Form1()
         {
             InitializeComponent(); //arranca programa
@@ -27,8 +29,18 @@ namespace FormAlumnos
         {
             if (File.Exists(filePath))
             {
+                try
+                { 
                 string jsonContent = File.ReadAllText(filePath); // loads alumnos list
                 alumnos = JsonConvert.DeserializeObject<List<Alumno>>(jsonContent); // deserialize into object of objects
+                }
+
+                catch (Exception ex)
+                {
+
+                    log.Error("load error: " + ex.StackTrace);
+
+                }
             }
 
         }
@@ -59,11 +71,18 @@ namespace FormAlumnos
                 StringBuilder msg = new StringBuilder();
                 msg.Append(filePath);
                 msg.Append("Creado correctamente");
-             //   infoText.Text = msg.ToString(); <- if you add a label or popup
+                //   infoText.Text = msg.ToString(); <- if you add a label or popup
+
+                log.Debug("alumno creado correctamente " + JsonConvert.SerializeObject(alumno));
+                
             }   
+
             catch (Exception ex)
             {
-                Console.WriteLine("error: " + ex.StackTrace); // Follows trace error
+
+                log.Error("error creando alumno: " + ex.StackTrace);
+
+               // Console.WriteLine("error: " + ex.StackTrace); // Follows trace error
             }
         }
     }
