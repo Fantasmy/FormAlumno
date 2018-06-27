@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormAlumnos", "FormAlumnos\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlumnoXUnit.Unit.Test", "AlumnoXUnit.Unit.Test\AlumnoXUnit.Unit.Test.csproj", "{4F265E0E-2785-4E51-A439-90B32A2253B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{0B4DC955-7623-4054-8112-57558601ACA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F265E0E-2785-4E51-A439-90B32A2253B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F265E0E-2785-4E51-A439-90B32A2253B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F265E0E-2785-4E51-A439-90B32A2253B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4DC955-7623-4054-8112-57558601ACA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4DC955-7623-4054-8112-57558601ACA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4DC955-7623-4054-8112-57558601ACA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4DC955-7623-4054-8112-57558601ACA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

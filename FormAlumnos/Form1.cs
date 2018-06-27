@@ -30,9 +30,9 @@ namespace FormAlumnos
             if (File.Exists(filePath))
             {
                 try
-                { 
-                string jsonContent = File.ReadAllText(filePath); // loads alumnos list
-                alumnos = JsonConvert.DeserializeObject<List<Alumno>>(jsonContent); // deserialize into object of objects
+                {
+                    string jsonContent = File.ReadAllText(filePath); // loads alumnos list
+                    alumnos = JsonConvert.DeserializeObject<List<Alumno>>(jsonContent); // deserialize into object of objects
                 }
 
                 catch (Exception ex)
@@ -80,16 +80,31 @@ namespace FormAlumnos
                 idBox.Text = "";
 
                 log.Debug("alumno creado correctamente " + JsonConvert.SerializeObject(alumno));
-                
-            }   
+      
+            }
 
             catch (Exception ex)
             {
 
                 log.Error("error creando alumno: " + ex.StackTrace);
 
-               // Console.WriteLine("error: " + ex.StackTrace); // Follows trace error
+                // Console.WriteLine("error: " + ex.StackTrace); // Follows trace error
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void appConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
